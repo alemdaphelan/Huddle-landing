@@ -1,0 +1,143 @@
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --Poppins: 'Poppins', sans-serif;
+    --Open-Sans: 'Open Sans', sans-serif;
+    --text-weight: 400;
+    --title-weight: 600;
+    --fs: 15px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    max-width: 1600px;
+    font-family: var(--Open-Sans);
+    font-weight: var(--text-weight);
+    font-size: var(--fs);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    justify-content: space-between;
+    padding: 2rem 7rem;
+    background: var(--Violet) url('img/bg-desktop.svg') center center no-repeat;
+}
+
+header {
+    align-self: flex-start;
+    width: 15%;
+    min-width: 120px;
+    max-width: 20rem;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    align-items: center;
+    gap: 3rem;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+}
+
+h1 {
+    color: white;
+    font-size: 2.3rem;
+    font-weight: var(--title-weight);
+    font-family: var(--Poppins);
+    line-height: 2.3rem;
+}
+
+p {
+    color: white;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    font-weight: var(--text-weight);
+}
+
+section {
+    padding-right: 5rem;
+    padding-top: .5rem;
+}
+
+img {
+    width: 100%;
+}
+
+footer {
+    align-self: flex-end;
+    display: flex;
+}
+
+.icon {
+    padding: .5rem;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+i {
+    color: white;
+}
+
+button {
+    padding: 0.8rem 3.5rem;
+    color: var(--Violet);
+    border: 1px solid white;
+    border-radius: 100vw;
+    box-shadow: 0 0 15px -5px black;
+    transition: all 0.1s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    background: var(--Violet);
+    color: white;
+}
+
+button:active {
+    background: hsl(257, 40%, 40%)
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 2rem 5.5rem;
+        text-align: center;
+        background-image: url('img/bg-mobile.svg');
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        margin-top: 3rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        margin-top: -4rem;
+        padding: 0rem;
+    }
+
+    footer {
+        align-self: center;
+        margin-top: 3rem;
+    }
+
+    button {
+        margin-top: 1rem;
+        padding-inline: 5rem;
+    }
+}
